@@ -98,7 +98,7 @@ vglm <-
   if (is.character(family))
     family <- get(family)
   if (is.function(family))
-    family <- family()
+    family <- family( ... )
   if (!inherits(family, "vglmff")) {
     stop("'family = ", family, "' is not a VGAM family function")
   }
